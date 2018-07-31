@@ -22,6 +22,12 @@ public class Post {
 	@Column(columnDefinition = "TEXT")
 	private String body;
 	
+	@Column(columnDefinition = "TEXT")
+	private String teaser;	
+	
+	private String slug;	
+	
+	@CreatedDate @Column(columnDefinition = "TIMESTAMP")
 	private Date postedOn;
 
 	@ManyToOne
@@ -53,6 +59,14 @@ public class Post {
 		this.body = body;
 	}
 
+	public String getTeaser() {
+		return teaser;
+	}
+
+	public void setTeaser(String teaser) {
+		this.teaser = teaser;
+	}
+	
 	public Date getPostedOn() {
 		return postedOn;
 	}
