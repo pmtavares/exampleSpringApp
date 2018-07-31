@@ -1,5 +1,7 @@
 package com.exampleapp.service;
 
+import java.util.Date;
+
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +26,13 @@ public class DataLoader {
 	@PostConstruct
 	private void loadData(){
 		// create an author
-		Author dv = new Author("Dan","Vega");
+		Author dv = new Author("Pedro","Tavares");
 		authorRepository.save(dv);
 		
 		// create a post
 		Post post = new Post("Spring Data Rocks!");
 		post.setBody("Post Body here...");
+		post.setPostedOn(new Date());
 		post.setAuthor(dv);
 		postRepository.save(post);
 	}
