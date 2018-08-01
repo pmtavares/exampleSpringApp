@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"	xmlns:th="https://www.thymeleaf.org">
+<html lang="en"	xmlns:th="https://www.thymeleaf.org" layout:decorator="layouts/main">
 <head>
 	<title>Pedro's page - Home Page</title>
 </head>
@@ -24,9 +24,10 @@
 				teaser
 			</section>
 			<footer>
-				
+				<a th:href="|@{/post/}${post.slug}|">Read More</a>
 				<address>
-					
+					Posted By <a th:href="|mailto:${post.author.lastName}|"> <span th:text="|${post.author.firstName} ${post.author.lastName}|">author</span></a>
+				
 				</address>
 			</footer>
 			<hr/>

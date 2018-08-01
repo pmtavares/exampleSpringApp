@@ -27,6 +27,7 @@ public class Post {
 	
 	private String slug;	
 	
+	
 	@CreatedDate @Column(columnDefinition = "TIMESTAMP")
 	private Date postedOn;
 
@@ -65,6 +66,14 @@ public class Post {
 
 	public void setTeaser(String teaser) {
 		this.teaser = teaser;
+	}
+	
+	public String getSlug() {
+		return slug;
+	}
+
+	public void setSlug(String slug) {
+		this.slug = slug;
 	}
 	
 	public Date getPostedOn() {
