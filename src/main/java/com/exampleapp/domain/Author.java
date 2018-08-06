@@ -19,7 +19,7 @@ public class Author {
 	
 	
 
-	//posts
+	//posts changed
 	@OneToMany( mappedBy = "author" )
 	private List<Post> posts;
 	
